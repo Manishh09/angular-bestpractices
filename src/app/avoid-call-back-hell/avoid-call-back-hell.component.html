@@ -1,0 +1,14 @@
+<h2>Higher Order Operators</h2>
+<ng-template #load>
+  <p>loading..</p>
+</ng-template>
+<ng-container *ngIf="data$ | async as blog else load">
+  <section>
+
+    <label for="name">Title</label>
+    <input type="text" name="user" id="user" value="{{ blog.title }}" />
+
+    <label for="age">Cateogory</label>
+    <input type="text" name="age" id="age" value="{{ blog.category }}" />
+  </section>
+</ng-container>
