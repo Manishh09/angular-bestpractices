@@ -1,0 +1,36 @@
+<h2>ng-container - use cases</h2>
+<p>1. Deson't break layouts while grouping the elements</p>
+
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let item of headerList">{{ item.head }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <!-- <div *ngIf="item.number < 400">
+        div with ngIf changes the layout
+
+        <th>{{item.name}}</th>
+        <td>{{item.number}}</td>
+        <td>{{item.marketRate}}</td>
+        <td>{{item.weight}}</td>
+        <td>{{item.value}}</td>
+        </div>
+      -->
+    </tr>
+
+    <tr *ngFor="let item of data">
+      <ng-container *ngIf="item.number < 400">
+        <!-- deesnt change the layout -->
+
+        <th>{{ item.name }}</th>
+        <td>{{ item.number }}</td>
+        <td>{{ item.marketRate }}</td>
+        <td>{{ item.weight }}</td>
+        <td>{{ item.value }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
