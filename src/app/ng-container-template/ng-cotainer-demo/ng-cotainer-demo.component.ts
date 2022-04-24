@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { concat, concatMap } from 'rxjs';
 import { Statistics } from 'src/app/constants/constants';
+import { Blog } from 'src/app/models/blog';
 import { Stats } from 'src/app/models/stats';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-ng-cotainer-demo',
@@ -16,18 +19,20 @@ export class NgCotainerDemoComponent implements OnInit {
     {head: 'Weight', id: 4},
     {head: 'Value', id: 5}
   ]
-  constructor() { }
+  blogs!: Blog;
+  constructor(private _dataServ: DataService) { }
 
   ngOnInit(): void {
-    this.data.map(( x: any, index)=> {
-      this.headerList.forEach( (head, id) =>{
-        if(index === id){
-          x['head'] = head.head;
-        }
-      })
-    })
-    console.log(this.data);
+    this._dataServ.getUserData()
+    .pipe(
+      concatMap(user => this._dataServ.getBlogById(user.id))
+    ).subscribe({
+      next: (resp: Blog) => {
+        this.blogs = resp;
+      }
+    }
 
+    );
   }
 
 }
