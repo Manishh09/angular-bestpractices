@@ -1,3 +1,4 @@
+<!-- ng-container examples start-->
 <h2>ng-container - use cases</h2>
 <p>1. Deson't break layouts while grouping the elements</p>
 
@@ -53,3 +54,11 @@
     </div>
   </form>
 </ng-container>
+<!-- ng-container examples end-->
+
+<!-- ng-content example -->
+<app-ng-content-demo>
+  <p>You can specify an attribute to render the content conditionally</p>
+  <h3 h3Tag> ng-content tag should be used in app-ng-content-demo so as to render the projected content from parent component</h3>
+  <p class="description"> Projected content from ng-container-demo compoent</p>
+</app-ng-content-demo>
