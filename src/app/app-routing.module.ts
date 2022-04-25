@@ -13,7 +13,7 @@ const routes: Routes = [
     component: AvoidCallBackHellComponent
   },
   {
-    path: 'ng-container',
+    path: 'ng',
     loadChildren: () => import('./ng-container-template/ng-container-template.module').then(m => m.NgContainerTemplateModule)
   }
 ];

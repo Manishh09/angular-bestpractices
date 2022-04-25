@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { concat, concatMap } from 'rxjs';
+import { concatMap } from 'rxjs';
 import { Statistics } from 'src/app/constants/constants';
 import { Blog } from 'src/app/models/blog';
-import { Stats } from 'src/app/models/stats';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({

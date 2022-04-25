@@ -1,1 +1,13 @@
-<p>ng-template-demo works!</p>
+<h2>ng-template-demo</h2>
+<p>It is used with structural directives
+</p>
+<p>
+ <strong>Note:</strong>p tag with *ngIf structural directive is same as
+ ng-template tag with [ngIf]="true" <br>
+ This is the reason it is not allowed to use multiple structural directives on a same element
+</p>
+<ng-template [ngIf]="true">this is an angular template element</ng-template>
+
+<p>its also used to show the else block</p>
+<div *ngIf="false; else elseBlock">Truthy Check</div>
+<ng-template #elseBlock>else block content</ng-template>
