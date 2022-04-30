@@ -1,0 +1,16 @@
+<h2>without-async-pipe</h2>
+<ng-template #load>
+  <p>Loading...</p>
+</ng-template>
+<ng-container *ngIf="blogs; else load">
+  <form>
+    <div>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" [value]="blogs.title">
+    </div>
+    <div>
+      <label for="category">Category</label>
+      <input type="text" name="category" id="category" [value]="blogs.category">
+    </div>
+  </form>
+</ng-container>

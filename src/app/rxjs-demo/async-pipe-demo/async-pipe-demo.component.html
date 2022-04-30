@@ -1,0 +1,24 @@
+<h2>async-pipe-demo</h2>
+
+<section>
+  <h4>usecases</h4>
+  <p>1.automatic subcription and unsubscription</p>
+  <p>2.prevents protential memory leaks</p>
+</section>
+
+<ng-template #showLoading>
+  <p>Loading...</p>
+</ng-template>
+
+  <ng-container *ngIf="blogs$ | async as blogs else showLoading">
+    <form>
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" [value]="blogs.title">
+      </div>
+      <div>
+        <label for="category">Category</label>
+        <input type="text" name="category" id="category" [value]="blogs.category">
+      </div>
+    </form>
+  </ng-container>

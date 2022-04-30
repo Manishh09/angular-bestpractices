@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'ng',
     loadChildren: () => import('./ng-container-template/ng-container-template.module').then(m => m.NgContainerTemplateModule)
+  },
+  {
+    path: 'rxjs',
+    loadChildren: () => import('./rxjs-demo/rxjs-demo.module').then(m => m.RxjsDemoModule)
   }
 ];
 
