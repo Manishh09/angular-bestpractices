@@ -1,0 +1,9 @@
+<h3>search type ahead demo</h3>
+
+<input type="search" #search>
+<section *ngIf="search.value.length else elseBlock">
+  <div *ngFor="let stat of states">{{stat.text}}</div>
+</section>
+<ng-template #elseBlock>
+  <p>No results found</p>
+</ng-template>

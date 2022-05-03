@@ -1,0 +1,20 @@
+<h2>SwitchMap Demo</h2>
+<h3>Usecases</h3>
+<ul>
+  <li>Type ahead search operations</li>
+  <li>To cancel previous emitted values from the outer observerable</li>
+</ul>
+<hr>
+
+<section>
+  <h3>District List</h3>
+  <ul *ngIf="districtList?.length">
+    <li *ngFor="let dist of districtList">{{dist.text}}</li>
+  </ul>
+</section>
+
+<hr>
+
+<button (click)="navTo()">Go to Search District Component</button>
+
+
