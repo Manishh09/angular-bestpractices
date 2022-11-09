@@ -1,0 +1,14 @@
+<div class="users-list">
+    <h3>Without TrackBy Function</h3>
+    <p *ngFor="let user of users;">
+        {{user.id}}-{{user.name}}
+    </p>
+</div>
+<hr>
+<div class="users-list">
+    <h3>Using TrackBy Function</h3>
+    <p *ngFor="let user of users; trackBy: trackByIndex">
+        {{user.id}}-{{user.name}}
+    </p>
+</div>
+<button name="button-a" class="submit" type="button" (click)="refreshUserData()">Refresh User Data</button>
