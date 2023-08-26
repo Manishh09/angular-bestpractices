@@ -1,0 +1,11 @@
+<p>ng-home works!</p>
+<div class="button-container">
+  <button class="btn-template" id="btnTemplate" (click)="createComponent('template')">show ng-template</button>
+  <button class="btn-template" id="btnContent" (click)="createComponent('content')">show ng-content</button>
+  <button class="btn-template" id="btnContainer" (click)="createComponent('container')">show ng-container</button>
+  <button class="btn-template" id="btnTemplate" (click)="createComponent('trackBy')">show trackby</button>
+</div>
+<ng-container #ngTempateContainerRef></ng-container>
+<ng-container #ngContentContainerRef></ng-container>
+<ng-container #ngContainerRef></ng-container>
+<ng-container #trackByContainerRef></ng-container>

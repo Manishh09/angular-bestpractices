@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgContainerTemplateRoutingModule } from './ng-container-template-routing.module';
 import { NgContentDemoComponent } from './ng-content-demo/ng-content-demo.component';
 import { NgCotainerDemoComponent } from './ng-cotainer-demo/ng-cotainer-demo.component';
+import { NgHomeComponent } from './ng-home/ng-home.component';
 import { NgTemplateDemoComponent } from './ng-template-demo/ng-template-demo.component';
 import { TrackbyDemoComponent } from './trackby-demo/trackby-demo.component';
 
@@ -12,7 +13,8 @@ import { TrackbyDemoComponent } from './trackby-demo/trackby-demo.component';
     NgCotainerDemoComponent,
     NgContentDemoComponent,
     NgTemplateDemoComponent,
-    TrackbyDemoComponent
+    TrackbyDemoComponent,
+    NgHomeComponent,
   ],
   imports: [
     CommonModule,

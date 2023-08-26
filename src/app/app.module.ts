@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { CallBackHellComponent } from './call-back-hell/call-back-hell.component';
 import { AvoidCallBackHellComponent } from './avoid-call-back-hell/avoid-call-back-hell.component';
 import { BaseComponent } from './base/base.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BaseComponent } from './base/base.component';
     UserComponent,
     CallBackHellComponent,
     AvoidCallBackHellComponent,
-    BaseComponent
+    BaseComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

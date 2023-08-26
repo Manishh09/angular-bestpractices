@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { concatMap, Observable, Subscription } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Observable, Subscription, concatMap } from 'rxjs';
 import { Blog } from 'src/app/models/blog';
 import { DataService } from 'src/app/services/data.service';
 
@@ -12,12 +13,13 @@ export class AsyncPipeDemoComponent implements OnInit {
 
   blogs$!: Observable<Blog>;
   subscription!: Subscription;
-  constructor(private _dataServ: DataService) { }
+  constructor(private _dataServ: DataService, private domSan: DomSanitizer) { }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
   ngOnInit(): void {
+
     this.withAsyncPipe();
   }
 

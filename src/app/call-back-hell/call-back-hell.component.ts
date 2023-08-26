@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Blog } from '../models/blog';
 import { User } from '../models/user';
 import { DataService } from '../services/data.service';
@@ -11,7 +10,9 @@ import { DataService } from '../services/data.service';
 })
 export class CallBackHellComponent implements OnInit {
   data!: any;
-  constructor(private _dataServ: DataService) { }
+  constructor(private _dataServ: DataService) {
+
+  }
 
   ngOnInit(): void {
     // nested api calls
