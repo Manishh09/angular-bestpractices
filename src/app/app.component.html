@@ -1,3 +1,34 @@
-<input type="text" name="" id="url" (change)="validateURL($event)">
-{{validURL}}
+<!-- <input type="text" name="" id="url" (change)="validateURL($event)">
+{{validURL}} -->
+
+<!-- approach - 0 using selector tag -->
+    <!-- <app-user></app-user> -->
+    <!-- self closing tag  -->
+    <!-- <app-user /> -->
+<!-- approach - 1 using class -->
+
+    <!-- <div class="app-user"></div> -->
+
+<!-- approach - 2 using selector as directive -->
+
+    <!-- <div app-user></div> -->
+
+<!-- approach - 3 using dynamic component -->
+    <!-- <button (click)="create()">load user component</button>
+    <ng-container #userCompRef></ng-container> -->
+
+<!-- <div  *ngIf="true">
+    <p>Hello from div</p>
+</div>
+
+<ng-template [ngIf]="true">
+    <div>
+        <h3>hello from ng-template with ngIf</h3>
+    </div>
+</ng-template>
+
+<p highlight="red">hello directive</p>
+
+<p disableRightClick>hello from right click </p> -->
+<h2 >{{ title | titlecase}}</h2>
 <router-outlet></router-outlet>

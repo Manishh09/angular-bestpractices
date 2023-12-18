@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'cbh',
     component: CallBackHellComponent
   },
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: () => import('./rxjs-demo/rxjs-demo.module').then(m => m.RxjsDemoModule)
   },
   {
-    path: '**', component: PageNotFoundComponent
+     path: '**', component: PageNotFoundComponent
   }
 ];
 

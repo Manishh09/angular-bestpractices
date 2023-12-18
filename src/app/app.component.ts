@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
+import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Event, NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @ViewChild('userCompRef', { read: ViewContainerRef })
+  userCompRef!: ViewContainerRef;
   title = 'angular-bestpractices';
   validURL = false;
   constructor(private router: Router){
@@ -17,7 +21,10 @@ export class AppComponent {
       });
   }
 
-
+  create(): void {
+    this.userCompRef.clear()
+    this.userCompRef.createComponent(UserComponent);
+  }
 
 validateURL(value: any) {
   let valid = true;
